@@ -12,4 +12,7 @@ def extract_text_from_pdf(pdf_file:str) -> list[str]:
         print('Pages:', len(reader.pages))
         print('-' * 10) # Divider
 
-        
+        pdf_text: list[str] = [page.extract_text() for page in in reader.pages]
+        return pdf_text
+    
+    
