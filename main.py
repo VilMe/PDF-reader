@@ -15,10 +15,16 @@ def extract_text_from_pdf(pdf_file:str) -> list[str]:
         pdf_text: list[str] = [page.extract_text() for page in reader.pages]
         return pdf_text
 
+def count_words(text_list: list[str]) -> Counter:
+    
+
+
 def main(): 
     extracted_text: list[str] = extract_text_from_pdf('sample.pdf')
     for page in extracted_text:
         print(page)
+
+
 
 
 
