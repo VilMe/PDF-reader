@@ -16,13 +16,15 @@ def extract_text_from_pdf(pdf_file:str) -> list[str]:
         return pdf_text
 
 def count_words(text_list: list[str]) -> Counter:
-    
+    all_words: list[str] = []
+    for text in text_list:
+        split_text: list[str] = re.split(r'\s+|[,;?!.-]\s*', text.lower)
+        print(split_text)
 
 
 def main(): 
     extracted_text: list[str] = extract_text_from_pdf('sample.pdf')
-    for page in extracted_text:
-        print(page)
+    count_words(extracted_text)
 
 
 
