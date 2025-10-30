@@ -21,6 +21,10 @@ def count_words(text_list: list[str]) -> Counter:
         split_text: list[str] = re.split(r'\s+|[,–⦁;?!.()-]\s*', text.lower())
         # print(split_text)
 
+        all_words += [word for word in split_text if word]:
+
+    return Counter(all_words)
+
 
 def main(): 
     extracted_text: list[str] = extract_text_from_pdf('sample.pdf')
