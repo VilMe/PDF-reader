@@ -30,7 +30,7 @@ def main():
     extracted_text: list[str] = extract_text_from_pdf('sample.pdf')
     counter: Counter = count_words(text_list=extracted_text)
 
-    for word, mentino in counter.most_common(5):
+    for word, mentions in counter.most_common(5):
         print(f'{word:10}: {mentions} times')
 
 
